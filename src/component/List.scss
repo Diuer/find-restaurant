@@ -1,0 +1,80 @@
+.list-block{
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    min-height: 100px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 5px;
+
+    a, p{
+        margin: 0;
+        padding: 0;
+    }
+    i{
+        margin: 2px;
+    }
+
+    &:nth-child(odd){
+        background-color: #fff3ee;
+    }
+    &:nth-child(even){
+        background-color: #fffcec;
+    }
+    .user-comment{
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: baseline;
+        position: relative;
+
+        .comment-price{
+            margin-right: 10px;
+            color: #d9b300;
+
+            &:empty::before{
+                content: '暫無價錢資訊';
+                font-size: 12px;
+            }
+        }
+        .comment-score{
+            color: #01b468	;
+        }
+        .comment-count{
+            font-size: 12px;
+            color: #777;
+
+            &:empty::before{
+                content: '暫無評論資訊';
+            }
+            &:not(:empty)::before{
+                content: '(';
+                margin-left: 5px;
+            }
+            &:not(:empty)::after{
+                content: ')';
+                margin-right: 5px;
+            }
+        }
+    }
+    .title{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .location{
+        i{
+            color: #EA4335;
+        }
+        a{
+            color: #0072e3;
+            text-decoration: none;
+
+            &:hover, &:focus{
+                text-decoration: underline;
+            }
+            &:empty::before{
+                content: '暫無地址資訊';
+            }
+        }
+    }
+}
