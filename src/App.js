@@ -106,7 +106,7 @@ class App extends React.Component {
 
   sortLists(e){
     const sortType = (e.target.getAttribute('data-sort-type') === 'asc')? {start: 1, end: -1} : {start: -1, end: 1}
-    let {sortedLists} = this.state.lists
+    let sortedLists = this.state.lists
 
     sortedLists = sortedLists.sort(function (a, b) {
       return a[e.target.value] > b[e.target.value] ? sortType.start : sortType.end
@@ -120,7 +120,7 @@ class App extends React.Component {
 
   filterLists(e){
     const filterType = parseInt(e.target.getAttribute('data-filter-number'))
-    let {sortedLists} = this.state.lists
+    let sortedLists = this.state.lists
     sortedLists = sortedLists.filter((item, index, array)=>{
       return (e.target.value === 'price_level') ? item[e.target.value] === filterType : item[e.target.value] >= filterType
     })
