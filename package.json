@@ -29,7 +29,20 @@
       "last 1 safari version"
     ]
   },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
   "devDependencies": {
-    "node-sass": "^4.12.0"
-  }
+    "node-sass": "^4.12.0",
+    "gh-pages": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diuer/find-restaurant.git"
+  },
+  "author": "Diuer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diuer/find-restaurant/issues"
+  },
+  "homepage": "https://diuer.github.io/find-restaurant"
 }
